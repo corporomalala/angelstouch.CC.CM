@@ -1,0 +1,10 @@
+metadata:
+  name: "Angel's Touch"
+  title: "Angel's Touch Cakery"
+  whatsapp: "+27630478534"
+key: "Angel's Touch Cakery"
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/

@@ -1,0 +1,72 @@
+- cake:
+  - title-sub: "Giant"
+  - title-main: "3-Story Wedding Cake"
+  - image: "cake-1.png"
+  - content: "Event: Wedding <br />Servings: 55-70 people"
+- cake:
+  - title-sub: "Mermaid"
+  - title-main: "Under the Sea Cake"
+  - image: "cake-2.png"
+  - content: "Event: Birthday <br />Servings: 55-70 people"
+- cake:
+  - title-sub: "Football"
+  - title-main: "Manchester United Cake"
+  - image: "cake-3.png"
+  - content: "Event: Birthday <br />Servings: 55-70 people"
+- cupcake:
+  - image: "cupcake-1.png"
+- cupcake:
+  - image: "cupcake-2.png"
+- cake:
+  - title-sub: "Elsa"
+  - title-main: "Disney Frozen Cake"
+  - image: "cake-4.png"
+  - content: "Event: Birthday <br />Servings: 55-70 people"
+- cake:
+  - title-sub: "Chef"
+  - title-main: "Kitchen Chef Cake"
+  - image: "cake-5.png"
+  - content: "Event: Promotion <br />Servings: 55-70 people"
+- cake:
+  - title-sub: "Game"
+  - title-main: "Race Car Cake"
+  - image: "cake-6.png"
+  - content: "Event: Birthday <br />Servings: 55-70 people"
+- cupcake:
+  - image: "cupcake-3.png"
+- cupcake:
+  - image: "cupcake-4.png"
+- cake:
+  - title-sub: "Classy"
+  - title-main: "Rose Cake"
+  - image: "cake-7.png"
+  - content: "Event: Brunch <br />Servings: 55-70 people"
+- cake:
+  - title-sub: "Pregnancy"
+  - title-main: "Baby Shower Cake"
+  - image: "cake-8.png"
+  - content: "Event: Baby Shower <br />Servings: 55-70 people"
+- cake:
+  - title-sub: "Fruits"
+  - title-main: "21 Birthday Cake"
+  - image: "cake-9.png"
+  - content: "Event: Birthday <br />Servings: 55-70 people"
+- cupcake:
+  - image: "cupcake-5.png"
+- cupcake:
+  - image: "cupcake-6.png"
+- cake:
+  - title-sub: "Animal"
+  - title-main: "White Rabbit Cake"
+  - image: "cake-10.png"
+  - content: "Event: Brunch <br />Servings: 55-70 people"
+- cake:
+  - title-sub: "Couples"
+  - title-main: "Valentine's Day Cake"
+  - image: "cake-11.png"
+  - content: "Event: Anniversary <br />Servings: 55-70 people"
+- cake:
+  - title-sub: "Pink"
+  - title-main: "Barbie Prom Cake"
+  - image: "cake-12.png"
+  - content: "Event: Prom <br />Servings: 55-70 people"

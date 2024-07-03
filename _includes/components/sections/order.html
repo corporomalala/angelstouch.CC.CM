@@ -1,0 +1,23 @@
+<section class="order d-midWrap">{% for file in site.data.order %}{% for data in file %}
+	<div class="order-box">
+		<label class="order-box-label">{{ data[0] }}:</label>
+		<br />
+		<select class="order-box-select">{% for content in data[1] %}{% for dropdown in content %}
+			<option>{{ dropdown }}</option>{% endfor %}{% endfor %}
+		</select>
+	</div>{% endfor %}{% endfor %}
+	<div class="order-box is-input">
+		<label class="order-box-label">Your Name:</label>
+		<br />
+		<input type="text" class="order-box-input" />
+	</div>
+	<div class="order-box is-input">
+		<label class="order-box-label">XYZ:</label>
+		<br />
+		<input type="text" class="order-box-input" />
+	</div>
+	
+	<div class="order-box is-submit">
+		<input type="submit" class="order-box-submit" value="Proceed  to  Whatsapp" />
+	</div>
+</section>
