@@ -15,8 +15,10 @@
   - content: "Event: Birthday <br />Servings: 55-70 people"
 - cupcake:
   - image: "cupcake-1.png"
+  - background: "cupcake-1_background.png"
 - cupcake:
   - image: "cupcake-2.png"
+  - background: "cupcake-2_background.png"
 - cake:
   - title-sub: "Elsa"
   - title-main: "Disney Frozen Cake"
@@ -34,8 +36,10 @@
   - content: "Event: Birthday <br />Servings: 55-70 people"
 - cupcake:
   - image: "cupcake-3.png"
+  - background: "cupcake-3_background.png"
 - cupcake:
   - image: "cupcake-4.png"
+  - background: "cupcake-4_background.png"
 - cake:
   - title-sub: "Classy"
   - title-main: "Rose Cake"
@@ -53,8 +57,10 @@
   - content: "Event: Birthday <br />Servings: 55-70 people"
 - cupcake:
   - image: "cupcake-5.png"
+  - background: "cupcake-5_background.png"
 - cupcake:
   - image: "cupcake-6.png"
+  - background: "cupcake-6_background.png"
 - cake:
   - title-sub: "Animal"
   - title-main: "White Rabbit Cake"

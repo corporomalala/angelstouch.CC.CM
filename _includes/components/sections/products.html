@@ -1,21 +1,27 @@
-<section class="products d-midWrap"><ul class="products-list">{% for file in site.data.products %}{% for data in file %}{% if data[0] == "cake" %}
-	<li class="products-list-item is-cake">
-		<figure class="product">
-			<img class="product-img" src="/assets/images/products/{% for content in data[1] %}{{ content.image }}{% endfor %}" />
-			<figcaption class="product-details d-cssCentered">{% capture vTitleSub %}{% for content in data[1] %}{{ content.title-sub }}{% endfor %}{% endcapture %}{% capture vTitleMain %}{% for content in data[1] %}{{ content.title-main }}{% endfor %}{% endcapture %}
-				{% include components/sections/title.html vSub=vTitleSub vMain=vTitleMain %}
-				<p class="product-details-p">{% for content in data[1] %}{{ content.content }}{% endfor %}</p>
-				<div class="product-details-cta">{% assign vWhatsappText = "Hello, Angela. I saw _ cake on your website. Can you make me something similar?" %}
-					<span class="product-details-cta-span">Need something similar?</span>
-					<a href="https://wa.me/{{ site.metadata.whatsapp }}?text={{ vWhatsappText | replace: ' ', '%20' }}" class="product-details-cta-button">Order</a>
-				</div>
-			</figcaption>
-		</figure>
-	</li>{% endif %}{% if data[0] == "cupcake" %}
-	<li class="products-list-item is-cupcake">
-		<figure class="product">
-			<img class="product-img" src="/assets/images/products/{% for content in data[1] %}{{ content.image }}{% endfor %}" />
-		</figure>
-	</li>
-	{% endif %}{% endfor %}{% endfor %}
+<section class="products d-midWrap"><ul class="products-list">{% assign oldList = "" %}{% assign toChange = "no" %}{% for file in site.data.products %}{% for data in file %}{% assign newList = data[0] %}{% if oldList != newList %}{% if toChange == "yes" %}
+	</ul></div>{% endif %}
+	<div class="products-sublist_wrap is-{{ data[0] }}"><ul class="products-sublist is-{{ data[0] }}"><!--{{ oldList }} to {{ newList }}-->{% assign oldList = data[0] %}{% assign toChange = "yes" %}{% endif %}{% if data[0] == "cake" %}
+		<li class="products-sublist-item is-cake">
+			<figure class="product">
+				<img class="product-img" src="/assets/images/products/{% for content in data[1] %}{{ content.image }}{% endfor %}" />
+				<figcaption class="product-details d-cssCentered">{% capture vTitleSub %}{% for content in data[1] %}{{ content.title-sub }}{% endfor %}{% endcapture %}{% capture vTitleMain %}{% for content in data[1] %}{{ content.title-main }}{% endfor %}{% endcapture %}
+					{% include components/sections/title.html vSub=vTitleSub vMain=vTitleMain %}
+					<p class="product-details-p">{% for content in data[1] %}{{ content.content }}{% endfor %}</p>
+					<div class="product-details-cta">{% assign vWhatsappText = "Hello, Angela. I saw _ cake on your website. Can you make me something similar?" %}
+						<span class="product-details-cta-span">Need something similar?</span>
+						<a href="https://wa.me/{{ site.metadata.whatsapp }}?text={{ vWhatsappText | replace: ' ', '%20' }}" class="product-details-cta-button">Order</a>
+					</div>
+				</figcaption>
+			</figure>
+		</li>{% endif %}{% if data[0] == "cupcake" %}
+		<li class="products-sublist-item is-cupcake">
+			<figure class="product">
+				<img class="product-placeholder" src="/assets/images/placeholder-1x1.png" />
+
+				<img class="product-img" src="/assets/images/products/{% for content in data[1] %}{{ content.image }}{% endfor %}" />
+				<img class="product-img2" src="/assets/images/products/{% for content in data[1] %}{{ content.background }}{% endfor %}" />
+			</figure>
+		</li>
+	{% endif %}{% endfor %}{% if forloop.last %}
+	</ul>{% endif %}{% endfor %}
 </ul></section>

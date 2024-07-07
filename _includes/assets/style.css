@@ -8,7 +8,8 @@
 .about-description,
 .about-gallery { position: relative; z-index: 20; }
 
-.products-list-item.is-cupcake .product-img { position: relative; z-index: 30; }
+.products-sublist-item.is-cupcake .product-img2 { position: relative; z-index: 30; }
+.products-sublist-item.is-cupcake .product-img { position: relative; z-index: 40; }
 /*** END Z-INDEXES ***/
 
 /*** COLORS ***/{% assign vBrandPurple = "#BA1ED1" %}
@@ -17,21 +18,37 @@ body, html { background-color: #eee; }
 .about-mission,
 .about-mission:before,
 .header-content,
-.order-box-select,
-.products-list-item.is-cake:nth-child(odd) .product-img { background-color: {{ vBrandPurple }}; }
-.contact-submit { background-color: {{ vBrandPurple }} !important; }
+.products-sublist-item.is-cake:nth-child(odd) .product-img { background-color: {{ vBrandPurple }}; }
+.contact-submit,
+.order-box-submit { background-color: {{ vBrandPurple }} !important; }
+.about-gallery2-text-title,
+.banner-text-title,
 .header-logo-name-main,
 .m-header-title-main { color: {{ vBrandPurple }}; }
 .product { border-color: {{ vBrandPurple }}; }
 	.product-details { background-color: rgba(190, 30, 209, .7); }
 
 .product-details-cta-button { background-color: black; }
-.order-box-submit { background-color: black !important; }
+ { background-color: black !important; }
 
-.products-list-item.is-cupcake .product-img { background-color: #AAA; }
+.order-box-select,
+.products-sublist-item.is-cupcake .product-img,
+.products-sublist-item.is-cupcake .product-img2 { background-color: #AAA; }
 .header-logo-name-sub {// color: #AAA; }
 
+.products-sublist_wrap:nth-child(1) .products-sublist-item:nth-child(odd) .product,
+.products-sublist_wrap:nth-child(3) .products-sublist-item:nth-child(even) .product,
+.products-sublist_wrap:nth-child(5) .products-sublist-item:nth-child(odd) .product,
+.products-sublist_wrap:nth-child(7) .products-sublist-item:nth-child(even) .product { border-color: #AAA !important; }
+.products-sublist-item.is-cake:nth-child(odd) .product {// border-color: #AAA !important; }
+
+.about-gallery2-text,
+.banner-text,
+.header { background-color: rgba(255, 255, 255, .7); }
+
 .about-description { background-color: white; }
+.about-mission-text,
+.about-mission-title,
 .order-box-submit,
 .product-details-cta-button { color: white; }
 .product .m-header-title-main { color: white !important; }
@@ -51,19 +68,30 @@ body, html { background-color: #eee; }
 	/*src:url("../../assets/fonts/ALPHABETH.eot") format("embedded-opentype"),url("../../assets/fonts/ALPHABETH.woff2") format("woff2"),url("../../assets/fonts/ALPHABETH.woff") format("woff"),url("../../assets/fonts/ALPHABETH.ttf") format("trutype"),url("../../assets/fonts/ALPHABETH.svg") format("svg");*/
 }
 
+.about-gallery2-text-title,
+.banner-text-title,
 .header-logo-name-main,	
 .m-header-title-main { font-family: "Big Tickle Inside", serif; }
 body { font-family: "Batistta", sans-serif; }
 
+.contact-details-span,
 .header-logo-name-main,
 .header-logo-name-sub,
 .m-header-title-main { font-size: 1.9em; }
+.about-description-title,
+.about-mission-title,
 .product .m-header-title-main { font-size: 1.25em; }
 .product-details-cta-span,
 .m-header-title-sub { font-size: .9em; }
 
+.about-description-text,
+.about-mission-text { line-height: 1.25em; }
+
 .about-description,
+.about-gallery2-text-title,
 .about-mission,
+.banner-text-title,
+.contact-details-box,
 .footer,
 .order-box,
 .order-box-label,
@@ -77,17 +105,53 @@ body { font-family: "Batistta", sans-serif; }
 .product-details-cta-button:focus { text-decoration: underline; }
 .product-details-cta-button { text-transform: uppercase; }
 
+.header-logo-name-main,
 .product .m-header-title-main { white-space: nowrap; }
+
+
+.header-logo-name-main {// background: linear-gradient(to top, white, white, {{ vBrandPurple }}, {{ vBrandPurple }}, {{ vBrandPurple }}); }
+.m-header-title-main {// background: linear-gradient(to top, black, black, {{ vBrandPurple }}, {{ vBrandPurple }}, {{ vBrandPurple }}); }
+
+.about-gallery2-text-title,
+.banner-text-title,
+.header-logo-name-main,
+.m-header-title-main { background: linear-gradient(to top, white, white, {{ vBrandPurple }}, {{ vBrandPurple }}, {{ vBrandPurple }}); }
+.product .m-header-title-main { background: linear-gradient(to top, black, black, white, white, white); }
+.about-gallery2-text-title,
+.banner-text-title,
+.header-logo-name-main,
+.m-header-title-main,
+.product .m-header-title-main  {
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+.about-gallery2-text-title,
+.banner-text-title,
+.header-logo-name-main,
+.m-header-title-main {
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: {{ vBrandPurple }};
+}
+	.product .m-header-title-main {
+		-webkit-text-stroke-width: initial !important;
+		-webkit-text-stroke-color: initial !important;
+	}
 /*** END FONTS ***/
 
 /*** MEDIA ***/
+.banner-image { background-image: url("/assets/images/banner.png"); }
+.banner-image {
+	background-position: bottom;
+	background-size: cover;
+}
+
 .about-gallery-placeholder:nth-child(1) { background-image: url("/assets/images/gallery/gallery-1.png"); }
 .about-gallery-placeholder:nth-child(2) { background-image: url("/assets/images/gallery/gallery-2.png"); }
 .about-gallery-placeholder {
 	background-position: center;
 }
 
-.header-button { background-image: url("/assets/images/icon_menu_white.png"); }
+.header-button { background-image: url("/assets/images/icon_menu_black.png"); }
 .header-button {
 	background-size: cover;
 }
@@ -96,27 +160,38 @@ body { font-family: "Batistta", sans-serif; }
 .header-content-link-icon {
 	background-size: cover;
 }
+
+.u-icon.is-facebook { background-image: url("/assets/images/icon_facebook_black.png"); }
+.u-icon.is-location { background-image: url("/assets/images/icon_location_black.png"); }
+.u-icon.is-whatsapp { background-image: url("/assets/images/icon_whatsapp_black.png"); }
+.u-icon { background-size: cover !important; }
 /*** END MEDIA ***/
 
 /*** MIXINS ***/
-.m-header {
-	margin: 1.9em auto;
-}
-.product .m-header { margin: initial; }
-.m-header-title {
-	position: relative;
-	display: inline-block;
-	
-//	border: 1px solid purple;
-}
-.m-header-title-sub {
-	position: absolute; top: -.7em; right: -.7em;
-	transform: rotate(10deg);
-}
-	.product .m-header-title-sub {
-		right: initial !important; left: -.7em;
-		transform: rotate(-10deg);
+	/*** .m-header ***/
+	.m-header {
+		margin: 1.9em auto;
 	}
+	.product .m-header { margin: initial; }
+	.m-header-text {
+		width: 50%;
+		margin: 0 auto;
+		margin-top: 1em;
+	}
+	.m-header-title {
+		position: relative;
+		display: inline-block;
+		
+	//	border: 1px solid purple;
+	}
+	.m-header-title-sub {
+		position: absolute; top: -.7em; right: -.7em;
+		transform: rotate(10deg);
+	}
+		.product .m-header-title-sub {
+			right: initial !important; left: -.7em;
+			transform: rotate(-10deg);
+		}
 /*** END MIXINS ***/
 
 /*** COMPONENTS ***/
@@ -127,19 +202,27 @@ body { font-family: "Batistta", sans-serif; }
 	
 	.about-description,
 	.about-gallery,
+	.about-gallery2,
 	.about-mission {
 		min-height: 7em;
 		display: block;
 		margin: 0 auto;
 	}
 	.about-description,
-	.about-gallery {
+	.about-gallery,
+	.about-gallery2 {
 		width: 70%;
 	}
 	.about-gallery-img { width: 50%; }
 	.about-mission { width: 95%; }
-	.about-gallery-placeholder {
-//		border: 1px solid purple;
+	.about-gallery2 {
+		position: relative;
+	}
+	.about-gallery2-text {
+		position: absolute; top: 1em; left: 0; right: 0;
+		width: 70%;
+		padding: 1em;
+		margin: 0 auto;
 	}
 	
 	.about-description,
@@ -163,6 +246,16 @@ body { font-family: "Batistta", sans-serif; }
 	.banner {
 		position: relative;
 	}
+	.banner-image {
+		display: block;
+		width: 100%; min-height: 75vh;
+	}
+	.banner-text {
+		position: absolute; bottom: 1em; left: 0; right: 0;
+		width: 70%;
+		padding: 1em;
+		margin: 0 auto;
+	}
 	.banner-veil {
 		position: absolute; top: 0; left: 0;
 		width: 100%; height: 100%;
@@ -173,16 +266,29 @@ body { font-family: "Batistta", sans-serif; }
 	}
 	
 	/*** .contact ***/
-	.contact-box { display: flex; }
-	.contact-input { flex: 1; }
-	.contact-input,
-	.contact-textarea {
+	.contact-form-box { display: flex; }
+	.contact-form-input { flex: 1; }
+	
+	.contact-details {
+		margin-top: 3em;
+	}
+	.contact-details-box {
+		padding: 1em;
+	}
+	.contact-details-icon {
+		display: inline-block;
+		width: 1.9em; height: 1.9em;
+	}
+	
+	.contact-form-box {
+		width: 100%;
+	}
+	.contact-form-input,
+	.contact-form-textarea {
+		width: 100%;
 		display: block;
 		padding: 1em 1.9em;
 		margin: 1em;
-	}
-	.contact-input {
-		width: 50%;
 	}
 	.contact-submit {
 		width: 50%;
@@ -190,8 +296,8 @@ body { font-family: "Batistta", sans-serif; }
 		padding: 1em 1.9em;
 		margin: 0 auto;
 	}
-	.contact-textarea {
-		width: 100%;
+	.contact-form-textarea {
+		min-height: 10em;
 	}
 	
 	/*** .footer ***/
@@ -201,17 +307,18 @@ body { font-family: "Batistta", sans-serif; }
 	
 	/*** .header ***/
 	.header,
+	.header-nav,
 	.header-content,
 	.header-content-link,
 	.header-logo,
 	.header-logo-name { display: flex; }
 	.header,
+	.header-nav,
 	.header-content-link { align-items: center; }
 	.header-content { justify-content: flex-end; }
 	.header-content { flex: 1; }
 	
 	.header {
-		position: absolute; top: 0; left: 0;
 		width: 100%;
 	}
 	.header-button {
@@ -238,7 +345,8 @@ body { font-family: "Batistta", sans-serif; }
 	}
 
 	/*** .order ***/
-	.order {
+	.order-fieldset,
+	.order-fieldset-dock {
 		overflow: auto;
 	}
 	.order-box {
@@ -268,45 +376,40 @@ body { font-family: "Batistta", sans-serif; }
 	}
 	
 	/*** .products ***/
-	.products-list-item.is-cupcake { display: flex; }
-	.products-list-item:nth-child(4),
-	.products-list-item:nth-child(9),
-	.products-list-item:nth-child(14) { justify-content: flex-end; }
+	.products-sublist-item.is-cupcake { display: flex; }
+	.products-sublist-item:nth-child(4),
+	.products-sublist-item:nth-child(9),
+	.products-sublist-item:nth-child(14) { justify-content: flex-end; }
 	
-	.products-list {
-//		padding: 1em;
+	.products-sublist-item {
+		float: left;
 	}
-	.products-list-item.is-cake {
-		padding: 1.9em;
-	}
+	.products-sublist-item.is-cake { width: 33.333%; }
+	.products-sublist-item.is-cupcake { width: 50%; }
+	
 	.product {
 		position: relative;
 	}
-	.products-list-item.is-cake .product {
+	.products-sublist-item.is-cake .product {
 		padding: 1em;
 		border-width: .5em; border-style: solid;
 	}
-		.products-list-item.is-cake:nth-child(odd) .product {// padding: 1em; }
-		.products-list-item.is-cake:nth-child(odd) .product-img { padding: 1em; }
-	.products-list-item.is-cupcake {
+		.products-sublist-item.is-cake:nth-child(odd) .product {// padding: 1em; }
+		.products-sublist-item.is-cake:nth-child(odd) .product-img { padding: 1em; }
+	.products-sublist-item.is-cupcake {
 		position: relative;
 	}
-	.products-list-item.is-cupcake .product {
-		position: absolute;
-		width: 30%;
+	.products-sublist-item.is-cupcake .product {
 		margin: 1em .5em;
 	}
-	.products-list-item.is-cupcake .product-img {
+	.products-sublist-item.is-cupcake .product-img,
+	.products-sublist-item.is-cupcake .product-img2 {
+		position: absolute; top: 0; left: 0;
 		padding: 1em;
-//		position: absolute;
 	}
-	.products-list-item:nth-child(4) .product,
-	.products-list-item:nth-child(9) .product,
-	.products-list-item:nth-child(14) .product { top: -7em; right: 7em; }
-	.products-list-item:nth-child(5) .product,
-	.products-list-item:nth-child(10) .product,
-	.products-list-item:nth-child(15) .product { top: -7em; left: 7em; }
-		.products-list-item.is-cupcake {// border: 1px solid green; }
+	.products-sublist-item.is-cupcake .product-placeholder {
+//		position: relative;
+	}
 	.product-details {
 		position: absolute; top: 0; left: 0;
 		width: 100%; height: 100%;
@@ -323,29 +426,98 @@ body { font-family: "Batistta", sans-serif; }
 /*** END COMPONENTS ***/
 
 /*** INTERRACTIVITY ***/
-.about-gallery-placeholder { cursor: pointer; }
+.about-gallery-placeholder,
+.products-sublist-item.is-cupcake .product { cursor: pointer; }
 
 .product-details { display: none !important; }
 	.product:hover .product-details,
 	.product:hover .product-details,
 	.product:hover .product-details { display: flex !important; }
+
+.products-sublist-item.is-cupcake .product-img { visibility: hidden; }
+.products-sublist-item.is-cupcake .product:hover .product-img,
+.products-sublist-item.is-cupcake .product:active .product-img
+.products-sublist-item.is-cupcake .product:focus .product-img { visibility: visible !important; }
 /*** END INTERRACTIVITY ***/
 
 /*** MEDIA-QUERIES ***/
 @media screen and (max-width:50em) {
 	* { font-size: 16px; }
+	.about-gallery2-text-title,
+	.banner-text-title { font-size: 1.9em; }
+	
+	/*** .about ***/
+	.about-description-text,
+	.about-mission-text {
+		max-height: 50vh;
+		overflow: auto;
+	}
+	
+	/*** .contact ***/
+	.contact-form-box { flex-direction: column; }
+	
+	/*** .header ***/
+	.header { flex-direction: column !important; }
+	
+	.header-nav {
+		margin-bottom: 1em;
+	}
+	
+	/*** .order ***/
+	.order-fieldset-dock { width: 300%; }
+	
+	/*** .products ***/
+	.products-sublist.is-cake { width: 250%; }
+	.products-sublist_wrap { overflow: auto; }
+	
+	.products-sublist-item.is-cake { padding: 1em; }
+	
+	.products-sublist-item.is-cupcake .product {
+		width: 100%;
+	}
+	
+	/*** CSS-HACKS ***/
+	.contact-form-box { overflow: hidden; }
 }
 @media screen and (min-width:50em) {
 	* { font-size: 18px; }
+	.about-gallery2-text-title,
+	.banner-text-title { font-size: 2.7em; }
 	
-	.products-list {
+	/*** MIXINS ***/
+	
+	/*** .contact ***/
+	.contact-details_dock { display: flex; }
+	.contact-details-box { flex: 1; }
+	
+	/*** .header ***/
+	.header { position: absolute; top: 0; left: 0; }
+	
+	/*** .products ***/
+	.products-sublist-item.is-cake { padding: 1.9em; }
+
+	.products-sublist_wrap.is-cake,
+	.products-sublist.is-cake {
 		overflow: auto;
 	}
-	.products-list-item {
-		float: left;
+	.products-sublist.is-cupcake {
+		border: 1px solid purple;
 	}
-	.products-list-item.is-cake { width: 33.333%; }
-	.products-list-item.is-cupcake { width: 50%; }
+	.products-sublist-item.is-cupcake .product {
+		position: absolute;
+		width: 30%;
+	}
+		.products-sublist.is-cupcake .product { bottom: -7em; }
+		.products-sublist.is-cupcake .products-sublist-item:nth-child(odd) .product { left: 50%; }
+		.products-sublist.is-cupcake .products-sublist-item:nth-child(even) .product { left: 17%; }
+		/*
+		.products-sublist-item:nth-child(4) .product,
+		.products-sublist-item:nth-child(9) .product,
+		.products-sublist-item:nth-child(14) .product { top: -7em; right: 7em; }
+		.products-sublist-item:nth-child(5) .product,
+		.products-sublist-item:nth-child(10) .product,
+		.products-sublist-item:nth-child(15) .product { top: -7em; left: 7em; }
+		*/
 }
 /*** END MEDIA-QUERIES ***/
 
@@ -374,12 +546,17 @@ body { font-family: "Batistta", sans-serif; }
 }
 /*** END ANIMATION ***/
 
-/*** SANDBOX ***/
-.about-gallery {// display: none !important; }
-/*** END SANDBOX ***/
-
 /*** CSS-HACKS ***/
-.products-list-item.is-cupcake {
+.products-sublist-item.is-cupcake {
 	border: 1px solid transparent;
 }
+	.products-sublist_wrap {
+		border: 1px solid transparent;
+	}
 /*** END CSS-HACKS ***/
+
+/*** TO DELETE ***/
+.about-gallery { display: none !important; }
+.banner-img,
+.banner-veil { display: none !important; }
+/*** END TO DELETE ***/
