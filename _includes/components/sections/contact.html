@@ -15,12 +15,12 @@
 			<div class="contact-details-box">
 				<span class="contact-details-icon u-icon is-location"></span>
 				<br />
-				<a href="" class="contact-details-span">Normead, Benoni</a>
+				<a href="http://maps.google.com/?q=Northmead,Benoni" class="contact-details-span">Normead, Benoni</a>
 			</div>
 			<div class="contact-details-box">
 				<span class="contact-details-icon u-icon is-whatsapp"></span>
 				<br />
-				<a href="https://wa.me/" class="contact-details-span">{{ site.metadata.whatsapp | replace: "+27", "(+27) " }}</a>
+				<a href="whatsapp://send?abid={{ site.metadata.whatsapp }}&text=Hello%2C%20World!" class="contact-details-span">{{ site.metadata.whatsapp | replace: "+27", "(+27) " }}</a>
 			</div>
 		</div>
 		

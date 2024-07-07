@@ -501,7 +501,7 @@ body { font-family: "Batistta", sans-serif; }
 		overflow: auto;
 	}
 	.products-sublist.is-cupcake {
-		border: 1px solid purple;
+//		border: 1px solid purple;
 	}
 	.products-sublist-item.is-cupcake .product {
 		position: absolute;
