@@ -1,3 +1,7 @@
+/*** RESET ***/
+		*{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-family:inherit;vertical-align:baseline;font-size:1em;font-style:normal;-webkit-font-smoothing:antialiased;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;/*user-select:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;*/tap-highlight-color:transparent;-webkit-tap-highlight-color:transparent;-moz-tap-highlight-color:transparent;-o-tap-highlight-color:transparent;}*, *::before, *::after{-webkit-transition:.5s;-box-transition:.5s;-o-transition:.5s;transition:.5s;}:hover,:active,:focus{outline:0 !important;}html, body{min-height:100%;font-family:sans-serif;font-size:1rem;position:relative;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}body{margin:0;padding:0;line-height:1;}article, footer, header, section{display:block;}ol, ul{list-style:none;}a{display:inline-block;text-decoration:none;background-color:transparent;color:initial;}a img{border:none;}a, button, input[type="submit"]{cursor:pointer !important;}button{// background-color:transparent;}img{width:100%;height:auto;}img::selection{fill:none;color:none;display:none;background:none;}input[type="text"], input[type="number"], input[type="search"], input[type="email"], textarea{text-align:left;max-width:100%;}input[type="checkbox"], input[type="radio"]{display:none;}input[type="submit"]{background-color:transparent;}label{display:inline;}textarea{resize:vertical;}
+/*** END RESET ***/
+
 ---
 ---
 /*** Z-INDEXES ***/
@@ -12,20 +16,20 @@
 .products-sublist-item.is-cupcake .product-img1 { position: relative; z-index: 40; }
 /*** END Z-INDEXES ***/
 
-/*** COLORS ***/{% assign vBrandPurple = "#BA1ED1" %}
+/*** COLORS ***/
 body, html { background-color: #eee; }
 
 .about-mission,
 .about-mission:before,
 .header-content,
-.products-sublist-item.is-cake:nth-child(odd) .product-img { background-color: {{ vBrandPurple }}; }
+.products-sublist-item.is-cake:nth-child(odd) .product-img { background-color: #BA1ED1; }
 .contact-submit,
-.order-box-submit { background-color: {{ vBrandPurple }} !important; }
+.order-box-submit { background-color: #BA1ED1 !important; }
 .about-gallery2-text-title,
 .banner-text-title,
 .header-logo-name-main,
-.m-header-title-main { color: {{ vBrandPurple }}; }
-.product { border-color: {{ vBrandPurple }}; }
+.m-header-title-main { color: #BA1ED1; }
+.product { border-color: #BA1ED1; }
 	.product-details { background-color: rgba(190, 30, 209, .7); }
 
 .product-details-cta-button { background-color: black; }
@@ -109,13 +113,13 @@ body { font-family: "Batistta", sans-serif; }
 .product .m-header-title-main { white-space: nowrap; }
 
 
-.header-logo-name-main {// background: linear-gradient(to top, white, white, {{ vBrandPurple }}, {{ vBrandPurple }}, {{ vBrandPurple }}); }
-.m-header-title-main {// background: linear-gradient(to top, black, black, {{ vBrandPurple }}, {{ vBrandPurple }}, {{ vBrandPurple }}); }
+.header-logo-name-main {// background: linear-gradient(to top, white, white, #BA1ED1, #BA1ED1, #BA1ED1); }
+.m-header-title-main {// background: linear-gradient(to top, black, black, #BA1ED1, #BA1ED1, #BA1ED1); }
 
 .about-gallery2-text-title,
 .banner-text-title,
 .header-logo-name-main,
-.m-header-title-main { background: linear-gradient(to top, white, white, {{ vBrandPurple }}, {{ vBrandPurple }}, {{ vBrandPurple }}); }
+.m-header-title-main { background: linear-gradient(to top, white, white, #BA1ED1, #BA1ED1, #BA1ED1); }
 .product .m-header-title-main { background: linear-gradient(to top, black, black, white, white, white); }
 .about-gallery2-text-title,
 .banner-text-title,
@@ -130,7 +134,7 @@ body { font-family: "Batistta", sans-serif; }
 .header-logo-name-main,
 .m-header-title-main {
 	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: {{ vBrandPurple }};
+	-webkit-text-stroke-color: #BA1ED1;
 }
 	.product .m-header-title-main {
 		-webkit-text-stroke-width: initial !important;
