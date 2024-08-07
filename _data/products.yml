@@ -1,6 +1,6 @@
 - cake:
-  - title-sub: "Giant"
-  - title-main: "3-Story Wedding Cake"
+  - title-sub: "Peony"
+  - title-main: "3-Tier Wedding Cake"
   - image: "cake-1.png"
   - content: "Event: Wedding <br />Servings: 55-70 people"
 - cake:
@@ -25,13 +25,13 @@
   - image: "cake-4.png"
   - content: "Event: Birthday <br />Servings: 55-70 people"
 - cake:
-  - title-sub: "Chef"
-  - title-main: "Kitchen Chef Cake"
+  - title-sub: "Corporate"
+  - title-main: "Chef Jacket Cake"
   - image: "cake-5.png"
   - content: "Event: Promotion <br />Servings: 55-70 people"
 - cake:
-  - title-sub: "Game"
-  - title-main: "Race Car Cake"
+  - title-sub: "Cars"
+  - title-main: "Hot Wheels Cake"
   - image: "cake-6.png"
   - content: "Event: Birthday <br />Servings: 55-70 people"
 - cupcake:
@@ -47,12 +47,12 @@
   - content: "Event: Brunch <br />Servings: 55-70 people"
 - cake:
   - title-sub: "Pregnancy"
-  - title-main: "Baby Shower Cake"
+  - title-main: "Baby Bump Cake"
   - image: "cake-8.png"
   - content: "Event: Baby Shower <br />Servings: 55-70 people"
 - cake:
-  - title-sub: "Fruits"
-  - title-main: "21 Birthday Cake"
+  - title-sub: "Numbers"
+  - title-main: "21th Birthday Cake"
   - image: "cake-9.png"
   - content: "Event: Birthday <br />Servings: 55-70 people"
 - cupcake:
@@ -62,8 +62,8 @@
   - image: "cupcake-6.png"
   - background: "cupcake-6_background.png"
 - cake:
-  - title-sub: "Animal"
-  - title-main: "White Rabbit Cake"
+  - title-sub: "Cupcakes"
+  - title-main: "Rainbow Pullapart <br />Cupcake Cake"
   - image: "cake-10.png"
   - content: "Event: Brunch <br />Servings: 55-70 people"
 - cake:

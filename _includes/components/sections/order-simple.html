@@ -1,0 +1,42 @@
+<section class="orderSimple d-midWrap">
+	<div class="orderSimple-fieldset_wrap">
+	<fieldset class="orderSimple-fieldset"><div class="orderSimple-fieldset-dock">{% for file in site.data.orderSimple %}{% for data in file %}
+		<div class="orderSimple-box">
+			<label class="orderSimple-box-label">{{ data[0] }}:</label>
+			<br />
+			<select class="orderSimple-box-select">{% for content in data[1] %}{% for dropdown in content %}
+				<option>{{ dropdown }}</option>{% endfor %}{% endfor %}
+			</select>
+		</div>{% endfor %}{% endfor %}
+		<div class="orderSimple-box is-input">
+			<label class="orderSimple-box-label">Your Full Name *:</label>
+			<br />
+			<input type="text" class="orderSimple-box-input" autocomplete="off" required />
+		</div>
+		<div class="orderSimple-box is-input">
+			<label class="orderSimple-box-label">Your Email *:</label>
+			<br />
+			<input type="email" class="orderSimple-box-input" required />
+		</div>
+	</div></fieldset>
+	<fieldset class="orderSimple-fieldset">
+		<div class="orderSimple-box is-file">
+			<label class="orderSimple-box-label">Your sample photo *:</label>
+			<br />
+			<input type="file" class="orderSimple-box-file" required />
+		</div>
+		<div class="orderSimple-box is-textarea">
+			<label class="orderSimple-box-label">Cake/Cupcakes Details *:</label>
+			<br />
+			<textarea class="orderSimple-box-textarea" required></textarea>
+		</div>
+		<div class="orderSimple-box is-submit">
+			<input type="submit" class="orderSimple-box-submit" value="Send  Your  Order" />
+		</div>
+		
+		<div class="orderSimple-box is-toggle">
+			<label for="chkbx4orderCustom" class="orderSimple-box-toggle" value="Send  Your  Order">Or open a custom form</label>
+		</div>
+	</fieldset>
+	</div>
+</section>

@@ -1,19 +1,24 @@
 ---
 layout: default
 ---
-{% include components/sections/header.html %}
-{% include components/sections/banner.html %}
+<input type="checkbox" id="chkbx4orderCustom" name="chkbx4orderCustom" />
 
-{% include components/sections/title.html vSub="View" vMain="Our Product Gallery" vText="From elegant wedding cakes to delightful cupcakes, explore the artistry and passion that goes into each of our creations. Let our gallery inspire your next custom order!" %}
-{% include components/sections/products.html %}
+<main>
+	{% include components/sections/header.html %}
+	{% include components/sections/banner.html %}
 
-{% include components/sections/title.html vSub="Place" vMain="A Custom Order" vText="Whether it's for a special occasion or just a sweet indulgence, we’ll bring your vision to life with our handcrafted treats. If you prefer, you can simply message us on Whatsapp: (+27) 662345916." %}
-{% include components/sections/order.html %}
+	{% include components/sections/title.html vSub="View" vMain="Our Product Gallery" vText="From elegant wedding cakes to delightful cupcakes, explore the artistry and passion that goes into each of our creations. Let our gallery inspire your next custom order!" %}
+	{% include components/sections/products.html %}
 
-{% include components/sections/title.html vSub="Know" vMain="About Us" vText="Discover the heart and soul behind our journey, our commitment to quality, and our passion for baking." %}
-{% include components/sections/about.html %}
+	{% include components/sections/title.html vSub="Place" vMain="A Custom Order" vText="Whether it's for a special occasion or just a sweet indulgence, we’ll bring your vision to life with our handcrafted treats. If you prefer, you can simply message us on Whatsapp: (+27) 662345916." %}
+	{% include components/sections/order-simple.html %}
+	{% include components/sections/order-custom.html %}
 
-{% include components/sections/title.html vSub="Contact" vMain="Say Hello!" vText="Have questions or special requests? We’d love to hear from you! Reach out to us for any inquiries, feedback, or just to say hello. We're here to help make your experience with as sweet as possible." %}
-{% include components/sections/contact.html %}
+	{% include components/sections/title.html vSub="Know" vMain="About Us" vText="Discover the heart and soul behind our journey, our commitment to quality, and our passion for baking." %}
+	{% include components/sections/about.html %}
 
-{% include components/sections/footer.html %}
+	{% include components/sections/title.html vSub="Contact" vMain="Say Hello!" vText="Have questions or special requests? We’d love to hear from you! Reach out to us for any inquiries, feedback, or just to say hello. We're here to help make your experience with as sweet as possible." %}
+	{% include components/sections/contact.html %}
+
+	{% include components/sections/footer.html %}
+</main>

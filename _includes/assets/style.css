@@ -1,5 +1,12 @@
 ---
 ---
+/*** CANCEL ***/
+input[type="file"]::file-selector-button {
+//	color: purple;
+//	font-weight: bold;
+}
+/*** END CANCEL ***/
+
 /*** Z-INDEXES ***/
 .banner { position: relative; z-index: 10; }
 .header { position: relative; z-index: 20; }
@@ -20,7 +27,8 @@ body, html { background-color: #eee; }
 .header-content,
 .products-sublist-item.is-cake:nth-child(odd) .product-img { background-color: {{ vBrandPurple }}; }
 .contact-submit,
-.order-box-submit { background-color: {{ vBrandPurple }} !important; }
+.orderCustom-box-submit,
+.orderSimple-box-submit { background-color: {{ vBrandPurple }} !important; }
 .about-gallery2-text-title,
 .banner-text-title,
 .header-logo-name-main,
@@ -31,7 +39,7 @@ body, html { background-color: #eee; }
 .product-details-cta-button { background-color: black; }
  { background-color: black !important; }
 
-.order-box-select,
+.orderCustom-box-select,
 .products-sublist-item.is-cupcake .product-img1,
 .products-sublist-item.is-cupcake .product-img2 { background-color: #AAA; }
 .header-logo-name-sub {// color: #AAA; }
@@ -49,7 +57,8 @@ body, html { background-color: #eee; }
 .about-description { background-color: white; }
 .about-mission-text,
 .about-mission-title,
-.order-box-submit,
+.orderCustom-box-submit,
+.orderSimple-box-submit,
 .product-details-cta-button { color: white; }
 .product .m-header-title-main { color: white !important; }
 /*** END COLORS ***/
@@ -93,9 +102,9 @@ body { font-family: "Batistta", sans-serif; }
 .banner-text-title,
 .contact-details-box,
 .footer,
-.order-box,
-.order-box-label,
-.order-box-select,
+.orderCustom-box,
+.orderCustom-box-label,
+.orderCustom-box-select,
 .product-details-cta,
 .m-header { text-align: center; }
 .product-details-p { text-align: justify; }
@@ -201,6 +210,17 @@ body { font-family: "Batistta", sans-serif; }
 /*** END MIXINS ***/
 
 /*** COMPONENTS ***/
+	/*** COMMONS ***/
+	.orderCustom-box-input,
+	.orderCustom-box-select,
+	.orderSimple-box-file,
+	.orderSimple-box-input,
+	.orderSimple-box-select,
+	.orderSimple-box-textarea {
+		padding: .5em 1em;
+		margin: .5em;
+	}
+
 	/*** .about ***/
 	.about-gallery { display: flex !important; }
 	.about-gallery-img,
@@ -350,36 +370,38 @@ body { font-family: "Batistta", sans-serif; }
 		margin-right: .5em;
 	}
 
-	/*** .order ***/
-	.order-fieldset,
-	.order-fieldset-dock {
+	/*** .orderCustom ***/
+	.orderCustom-fieldset,
+	.orderCustom-fieldset-dock {
 		overflow: auto;
 	}
-	.order-box {
+	.orderCustom-box {
 		width: 25%;
 //		padding: 0 1em;
 		margin: 1.9em auto;
 		float: left;
 	}
-		.order-box.is-submit { width: 100%; }
-	.order-box-label,
-	.order-box-select {
+		.orderCustom-box.is-submit,
+		.orderSimple-box.is-submit { width: 100%; }
+	.orderCustom-box-label,
+	.orderCustom-box-select {
 //		padding: .5em 1em;
 	}
-	.order-box-label {
+	.orderCustom-box-label {
 		padding: 1em;
 	}
-	.order-box-input,
-	.order-box-select {
+	.orderCustom-box-input,
+	.orderCustom-box-select {
 		min-width: 70%; width: 70%; max-width: 70%;
-		padding: .5em 1em;
-		margin: .5em;
 	}
-	.order-box-submit {
+	.orderCustom-box-submit,
+	.orderSimple-box-submit {
 		min-width: 50%; width: 50%; max-width: 50%;
 		padding: 1em;
 		text-transform: uppercase;
 	}
+	
+	/*** .orderSimple ***/
 	
 	/*** .products ***/
 	.products-sublist-item.is-cupcake { display: flex; }
@@ -435,6 +457,9 @@ body { font-family: "Batistta", sans-serif; }
 .about-gallery-placeholder,
 .products-sublist-item.is-cupcake .product { cursor: pointer; }
 
+.orderCustom { display: none; }
+#chkbx4orderCustom:checked ~ main .orderCustom { display: block; }
+
 .product-details { display: none !important; }
 	.product:hover .product-details,
 	.product:hover .product-details,
@@ -469,8 +494,19 @@ body { font-family: "Batistta", sans-serif; }
 		margin-bottom: 1em;
 	}
 	
-	/*** .order ***/
-	.order-fieldset-dock { width: 300%; }
+	/*** .orderCustom ***/
+	.orderCustom-fieldset-dock { width: 300%; }
+	
+	/*** .orderSimple ***/
+	.orderSimple-fieldset {
+		width: 100%;
+		text-align: center;
+	}
+	.orderSimple-box-input,
+	.orderSimple-box-select,
+	.orderSimple-box-textarea {
+		width: 70%;
+	}
 	
 	/*** .products ***/
 	.products-sublist.is-cake { width: 250%; }
@@ -524,6 +560,20 @@ body { font-family: "Batistta", sans-serif; }
 		.products-sublist-item:nth-child(10) .product,
 		.products-sublist-item:nth-child(15) .product { top: -7em; left: 7em; }
 		*/
+	
+	/*** .orderSimple ***/
+	.orderSimple-box.is-textarea,
+	.orderSimple-fieldset_wrap,
+	.orderSimple-fieldset:nth-child(2) { display: flex; }
+	.orderSimple-box.is-textarea,
+	.orderSimple-fieldset:nth-child(2) { flex-direction: column; }
+	.orderSimple-box.is-textarea,
+	.orderSimple-box-textarea,
+	.orderSimple-fieldset { flex: 1; }
+	
+	.orderSimple-fieldset_wrap {
+		width: 100%;
+	}
 }
 /*** END MEDIA-QUERIES ***/
 

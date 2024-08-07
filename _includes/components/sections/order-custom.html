@@ -1,0 +1,25 @@
+<section class="orderCustom d-midWrap">
+	<fieldset class="orderCustom-fieldset"><div class="orderCustom-fieldset-dock">{% for file in site.data.orderCustom %}{% for data in file %}
+		<div class="orderCustom-box">
+			<label class="orderCustom-box-label">{{ data[0] }}:</label>
+			<br />
+			<select class="orderCustom-box-select">{% for content in data[1] %}{% for dropdown in content %}
+				<option>{{ dropdown }}</option>{% endfor %}{% endfor %}
+			</select>
+		</div>{% endfor %}{% endfor %}
+		<div class="orderCustom-box is-input">
+			<label class="orderCustom-box-label">Full Name *:</label>
+			<br />
+			<input type="text" class="orderCustom-box-input" autocomplete="off" required />
+		</div>
+		<div class="orderCustom-box is-input">
+			<label class="orderCustom-box-label">Email *:</label>
+			<br />
+			<input type="email" class="orderCustom-box-input" required />
+		</div>
+	</div></fieldset>
+	
+	<div class="orderCustom-box is-submit">
+		<input type="submit" class="orderCustom-box-submit" value="Send  Your  Custom Order" />
+	</div>
+</section>
