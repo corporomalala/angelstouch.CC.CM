@@ -4,31 +4,31 @@
 		<div class="orderSimple-box">
 			<label class="orderSimple-box-label">{{ data[0] }}:</label>
 			<br />
-			<select class="orderSimple-box-select">{% for content in data[1] %}{% for dropdown in content %}
+			<select class="orderSimple-box-select" name="{{ data[0] }}">{% for content in data[1] %}{% for dropdown in content %}
 				<option>{{ dropdown }}</option>{% endfor %}{% endfor %}
 			</select>
 		</div>{% endfor %}{% endfor %}
 		<div class="orderSimple-box is-input">
 			<label class="orderSimple-box-label">Your Full Name *:</label>
 			<br />
-			<input type="text" class="orderSimple-box-input" autocomplete="off" required />
+			<input type="text" name="Full Name" class="orderSimple-box-input" autocomplete="off" required />
 		</div>
 		<div class="orderSimple-box is-input">
 			<label class="orderSimple-box-label">Your Email *:</label>
 			<br />
-			<input type="email" class="orderSimple-box-input" required />
+			<input type="email" name="Email" class="orderSimple-box-input" required />
 		</div>
 	</div></fieldset>
 	<fieldset class="orderSimple-fieldset">
 		<div class="orderSimple-box is-file">
 			<label class="orderSimple-box-label">Your sample photo *:</label>
 			<br />
-			<input type="file" class="orderSimple-box-file" required />
+			<input type="file" name="Sample Photo(s)" class="orderSimple-box-file" />
 		</div>
 		<div class="orderSimple-box is-textarea">
 			<label class="orderSimple-box-label">Cake/Cupcakes Details *:</label>
 			<br />
-			<textarea class="orderSimple-box-textarea" required></textarea>
+			<textarea name="Details/Requirements" class="orderSimple-box-textarea" required></textarea>
 		</div>
 		<div class="orderSimple-box is-submit">
 			<input type="submit" class="orderSimple-box-submit" value="Send  Your  Order" />
