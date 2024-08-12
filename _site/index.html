@@ -388,7 +388,7 @@
 	</ul>
 </ul></section>
 
-	<form method="POST" action="https://formspree.io/f/myzgjnzg" enctype="multipart/form-data">
+	<form method="POST" action="https://getform.io/f/adryqoxa" enctype="multipart/form-data">
 	<header class="m-header">
 	<h3 class="m-header-title"><span class="m-header-title-sub">Place</span><span class="m-header-title-main">A Custom Order</span></h3>
 	
@@ -441,7 +441,7 @@
 		</div>
 		
 		<div class="orderSimple-box is-toggle">
-			<label for="chkbx4orderCustom" class="orderSimple-box-toggle" value="Send  Your  Order">Or open a custom form</label>
+			<label for="chkbx4orderCustom" class="orderSimple-box-toggle" value="Send  Your  Order" style="display: block !important; padding: 1.9em 0 !important;">Or click here, if you need to include more details to order.</label>
 		</div>
 	</fieldset>
 	</div>
@@ -452,6 +452,7 @@
 			<label class="orderCustom-box-label">Event:</label>
 			<br />
 			<select class="orderCustom-box-select" name="Event">
+				<option>-</option>
 				<option>Birthday</option>
 				<option>Wedding</option>
 				<option>Anniversary</option>
@@ -465,6 +466,7 @@
 			<label class="orderCustom-box-label">Cake Layers:</label>
 			<br />
 			<select class="orderCustom-box-select" name="Cake Layers">
+				<option>-</option>
 				<option>Single Layer</option>
 				<option>Double Layer</option>
 				<option>Triple Layer</option>
@@ -475,6 +477,7 @@
 			<label class="orderCustom-box-label">Flavour:</label>
 			<br />
 			<select class="orderCustom-box-select" name="Flavour">
+				<option>-</option>
 				<option>No Preference</option>
 				<option>Vanilla</option>
 				<option>Chocolate</option>
@@ -492,6 +495,7 @@
 			<label class="orderCustom-box-label">Serving:</label>
 			<br />
 			<select class="orderCustom-box-select" name="Serving">
+				<option>-</option>
 				<option>1-12 servings</option>
 				<option>13-24 servings</option>
 				<option>25-50 servings</option>
@@ -500,27 +504,10 @@
 			</select>
 		</div>
 		<div class="orderCustom-box">
-			<label class="orderCustom-box-label">Filling:</label>
-			<br />
-			<select class="orderCustom-box-select" name="Filling">
-				<option>No Preference</option>
-				<option>Vanilla Cream</option>
-				<option>Cream Cheese</option>
-				<option>Chocolate Ganache</option>
-				<option>Raspberry Jam</option>
-				<option>Lemon Curd</option>
-				<option>Strawberry Jam</option>
-				<option>Caramel</option>
-				<option>Custard</option>
-				<option>Fruit Jam</option>
-				<option>Buttercream</option>
-				<option>Custom</option>
-			</select>
-		</div>
-		<div class="orderCustom-box">
 			<label class="orderCustom-box-label">Frosting:</label>
 			<br />
 			<select class="orderCustom-box-select" name="Frosting">
+				<option>-</option>
 				<option>No Preference</option>
 				<option>Buttercream</option>
 				<option>Cream Cheese Frosting</option>
@@ -535,6 +522,7 @@
 			<label class="orderCustom-box-label">Decoration:</label>
 			<br />
 			<select class="orderCustom-box-select" name="Decoration">
+				<option>-</option>
 				<option>Simple (no special decocation)</option>
 				<option>Basic (sprinkles, standard design)</option>
 				<option>Detailed (fondant work, themed design)</option>
@@ -545,6 +533,7 @@
 			<label class="orderCustom-box-label">Dietary Restrictions:</label>
 			<br />
 			<select class="orderCustom-box-select" name="Dietary Restrictions">
+				<option>-</option>
 				<option>None</option>
 				<option>Nuts Allergy</option>
 				<option>Soy Allergy</option>
@@ -552,21 +541,10 @@
 			</select>
 		</div>
 		<div class="orderCustom-box">
-			<label class="orderCustom-box-label">Additional Topings:</label>
-			<br />
-			<select class="orderCustom-box-select" name="Additional Topings">
-				<option>None</option>
-				<option>Edible Flowers</option>
-				<option>Chocolate Chips</option>
-				<option>Fresh Fruits</option>
-				<option>Candy</option>
-				<option>Cookies</option>
-			</select>
-		</div>
-		<div class="orderCustom-box">
 			<label class="orderCustom-box-label">Cake Toper:</label>
 			<br />
 			<select class="orderCustom-box-select" name="Cake Toper">
+				<option>-</option>
 				<option>None</option>
 				<option>Standard 'Happy Birthday'</option>
 				<option>Custom Message</option>
@@ -629,13 +607,13 @@
 	<p class="m-header-text">Have questions or special requests? We’d love to hear from you! Reach out to us for any inquiries, feedback, or just to say hello. We're here to help make your experience with as sweet as possible.</p>
 </header>
 	<section class="contact d-midWrap">
-	<form class="contact-form">
+	<form method="POST" class="contact-form" action="https://formspree.io/f/mgvwynlv">
 		<div class="contact-form-box">
-			<input type="text" class="contact-form-input" placeholder="Your Name *" required />
-			<input type="text" class="contact-form-input" placeholder="Your Email *" required />
+			<input type="text" name="Your Name" class="contact-form-input" placeholder="Your Name *" required />
+			<input type="text" name="Your Email" class="contact-form-input" placeholder="Your Email *" required />
 		</div>
 		<div class="contact-form-box">
-			<textarea class="contact-form-textarea" placeholder="Your Message *" required></textarea>
+			<textarea name="Your Message" class="contact-form-textarea" placeholder="Your Message *" required></textarea>
 		</div>
 		<input type="submit" class="contact-submit" value="Send Message" />
 	</form>
@@ -661,7 +639,7 @@
 				<a href="https://web.facebook.com/angelstouchcakery/" class="contact-details-span">Angel's Touch Cakery</a>
 			</div>
 		</div>
-	</div>
+			</div>
 	<div class="contact-details">
 	</div>
 </section>
